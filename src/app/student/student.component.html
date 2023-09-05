@@ -1,0 +1,22 @@
+<body>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Marks (out of 100)</th>
+            <th scope="col">Pass/Fail</th>
+          </tr>
+        </thead>
+        
+        <tbody *ngFor="let item of student">
+            <tr>
+                <td>{{item.Name}}</td>
+                <td>{{item.Email}}</td>
+                <td [ngClass]="{'red-text': item.Marks <50, 'green-text':item.Marks >=50}">{{item.Marks}}</td>
+                <td *ngIf="item.Marks >=50" class="pass-badge">PASS</td>
+                <td *ngIf="item.Marks < 50" class="fail-badge">Fail</td>
+            </tr>
+        </tbody>
+    </table>
+</body>

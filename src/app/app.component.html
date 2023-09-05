@@ -1,0 +1,17 @@
+<div style="text-align: center;background-color:grey;font-style: oblique;">
+  <img src="assets/hct.jpg" width="150" height="150">
+<hr>
+
+<h1> {{str}} </h1>
+<div style="text-align: center;">
+  
+   <h5 style="text-align: center;">Enter your Name :</h5>
+  <input type ="text" [(ngModel)]="data"><br> 
+  <h5 style="text-align: center;">{{data}}</h5><hr>
+  <ul class ="ul-div">
+   <button type="submit" [routerLink]="['/student']"> Go to student mark </button>
+  </ul>   
+</div>
+
+
+<router-outlet></router-outlet>
